@@ -23,8 +23,12 @@
                                 @foreach ($kontrak as $data )
                                 <tr>
                                     <th>{{$loop->iteration}}</th>
-                                    <td>{{$data->mahasiswa->nama_mahasiswa}}</td>
-                                    <td>{{$data->semester_id}}</td>
+                                    @foreach ($mahasiswa as $mhs)
+                                    @if ($mhs->id == $data->mahasiswa_id)
+                                    <td> {{ $mhs->nama_mahasiswa}} </td>     
+                                    @endif
+                                    @endforeach
+                                    <td>{{$data->semester->semester}}</td>
                                     <td>
                                         <div class="row">
                                         <button type="button" class="btn  btn-sm btn-primary mr-1" data-toggle="modal"

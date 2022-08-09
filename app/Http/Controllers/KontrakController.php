@@ -17,7 +17,7 @@ class KontrakController extends Controller
     public function index()
     {
         $kontrak = Kontrak::all();
-        $mahasiswa = Mahasiswa::all();
+        $mahasiswa = Mahasiswa::all('id', 'nama_mahasiswa');
         $semester = Semester::all('id','semester');
         return view('Kontrak.tablekontrak', compact('kontrak','mahasiswa','semester'));
     }
