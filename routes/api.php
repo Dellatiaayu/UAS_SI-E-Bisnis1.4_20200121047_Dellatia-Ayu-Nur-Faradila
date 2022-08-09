@@ -2,6 +2,12 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\MahasiswaController;
+use App\Http\Controllers\Api\AbsenController;
+use App\Http\Controllers\Api\JadwalController;
+use App\Http\Controllers\Api\SemesterController;
+use App\Http\Controllers\Api\MatakuliahController;
+use App\Http\Controllers\Api\KontrakController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +20,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::get('', [MahasiswaController::class, 'index']);
+//Route::post('', [MahasiswaController::class, 'store']);
+//Route::put('', [MahasiswaController::class, 'update']);
+//Route::get('', [MahasiswaController::class, 'show']);
+
+Route::resources([
+   'Mahasiswa'=>MahasiswaController::class,
+   'Absen'=>AbsenController::class,
+   'Jadwal'=>JadwalController::class,
+   'Semester'=>SemesterController::class,
+   'Matakuliah'=>MatakuliahController::class,
+   'Kontrak'=>KontrakController::class,
+]);

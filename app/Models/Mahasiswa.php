@@ -11,7 +11,7 @@ class Mahasiswa extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama_mahasiswa', 'no_tlp', 'alamat', 'email'];
+    protected $fillable = ['nama_mahasiswa','no_tlp', 'alamat', 'email'];
 
     public function kontrakmatkul()
     {

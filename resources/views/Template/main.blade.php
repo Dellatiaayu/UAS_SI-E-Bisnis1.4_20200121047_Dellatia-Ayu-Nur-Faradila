@@ -173,7 +173,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Dellatia Ayu</a> 2022</p>
+                <p>Copyright &copy; Designed & Developed by <a href="https://github.com/Dellatiaayu/UAS_SI-E-Bisnis1.4_20200121047_Dellatia-Ayu-Nur-Faradila.git">Dellatia Ayu</a> 2022</p>
             </div>
         </div>
         <!--**********************************
