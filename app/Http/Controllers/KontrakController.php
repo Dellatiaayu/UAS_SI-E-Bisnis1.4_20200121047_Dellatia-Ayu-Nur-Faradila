@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mahasiswa;
 use App\Models\Kontrak;
+use App\Models\Semester;
 use Illuminate\Http\Request;
 
 class KontrakController extends Controller
@@ -16,8 +17,9 @@ class KontrakController extends Controller
     public function index()
     {
         $kontrak = Kontrak::all();
-        $mahasiswa = Mahasiswa::all('id','nama_mahasiswa');
-        return view('Kontrak.tablekontrak', compact('kontrak','mahasiswa'));
+        $mahasiswa = Mahasiswa::all();
+        $semester = Semester::all('id','semester');
+        return view('Kontrak.tablekontrak', compact('kontrak','mahasiswa','semester'));
     }
 
     /**
